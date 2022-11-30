@@ -1,8 +1,8 @@
-import axios from "axios"
+
 const options = {
     method: 'GET',
     headers: {
-    "apikey":"t8bPLOfVRz7gKNT6QDromOLL2q3FlFXl",
+    "apikey":"xYWIEJMD1CbMJyH9gb8NuuIVxyXyawLg22",
     }
 };
 export const ConvertServices = {
@@ -10,9 +10,15 @@ export const ConvertServices = {
         if (count == '') {
             count = '0'
         }
-        console.log(count);
            return fetch(`https://api.apilayer.com/currency_data/convert?to=${convertTo}&from=${convertFrom}&amount=${count}`,options)  
            .then(response => response.json())
-           .then(result => result)
+     },
+
+     async getCourses(course:string){
+        if (course == '') {
+            course = 'USD'
+        }
+        return fetch(`https://api.apilayer.com/currency_data/live?source=${course}&currencies=AED%2CRUB%2CEUR%2CAOA%2CBTC%2CGIP%2CLVL%2CNZD%2CRUB%2CUSD%2CDZD%2CMNT%2CSGD`,options)  
+        .then(response => response.json())
      }
 }

@@ -1,0 +1,16 @@
+.block{
+    width: 800px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    >div{
+        display: flex;
+        justify-content: space-between;
+        >div{
+            display: flex;
+            gap:30px
+        }
+    }
+}
