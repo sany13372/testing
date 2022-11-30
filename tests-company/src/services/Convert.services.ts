@@ -2,7 +2,7 @@
 const options = {
     method: 'GET',
     headers: {
-    "apikey":"es9Y15Hdaw2pco8wsjNOII0598qDFvy1",
+    "apikey":"es9Y15Hdaw2pco8wsjNOII0598qDFvy",
     }
 };
 export const ConvertServices = {
@@ -18,7 +18,7 @@ export const ConvertServices = {
         if (course == '') {
             course = 'USD'
         }
-        return fetch(`https://api.apilayer.com/currency_data/live?source=${course}&currencies=AED%2CRUB%2CEUR%2CAOA%2CBTC%2CGIP%2CLVL%2CNZD%2CRUB%2CUSD%2CDZD%2CMNT%2CSGD`,options)  
+        return fetch(`https://api.apilayer.com/currency_data/live?source=${course}&currencies=`,options)  
         .then(response => response.json())
      }
 }
