@@ -5,7 +5,9 @@ import styles from './Field.module.scss'
 
 const Field:FC<IField> = ({onChangeValue,value,disabled = false}) =>{
     const convertValue = (e:ChangeEvent<HTMLInputElement>) => {
-         {onChangeValue && onChangeValue(e.target.value)} 
+        if (Number(e.target.value) >=0) {
+            {onChangeValue && onChangeValue(e.target.value)} 
+        }
     }
 return(
     <input

@@ -9,11 +9,13 @@ const Mainblock:FC = () =>{
     const [count,setCount] = useState<string>('0')
     const [totalConvert,setTotalConvert] = useState<string>('0')
     useEffect(()=>{
-        ConvertServices.Convert(convertto,convertfrom,count).then((data:IData) => setTotalConvert(data.result.toString()))
+        ConvertServices.Convert(convertto,convertfrom,count)
+        .then((data:IData) => setTotalConvert(data.result.toString()))
 },[])
 
     useEffect(()=>{
-        ConvertServices.Convert(convertto,convertfrom,count).then((data:IData) => setTotalConvert(data.result.toString()))
+        ConvertServices.Convert(convertto,convertfrom,count)
+        .then((data:IData) => setTotalConvert(data.result.toString()))
 },[count,convertto,convertfrom])
 return(
 <div>
